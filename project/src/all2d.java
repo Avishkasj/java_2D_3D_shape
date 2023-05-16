@@ -25,6 +25,14 @@ public class all2d extends JFrame {
                 frame4.setSize(1000, 600);
             }
         });
+        circleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame5= new Circle2D("2D Circle");
+                frame5.setVisible(true);
+                frame5.setSize(1000, 600);
+            }
+        });
     }
 
 
