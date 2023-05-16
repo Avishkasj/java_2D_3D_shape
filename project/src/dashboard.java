@@ -26,6 +26,15 @@ public class dashboard extends JFrame {
 
             }
         });
+        a3DButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dashboard.super.dispose();
+                JFrame frame3= new all3d("All 3D");
+                frame3.setVisible(true);
+                frame3.setSize(1000, 600);
+            }
+        });
     }
 
     public static void main(String[] args) {
