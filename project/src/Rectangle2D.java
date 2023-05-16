@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,27 +28,31 @@ public class Rectangle2D extends JFrame {
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String height = textField1.getText();
-                String width = textField2.getText();
-                String color;
+                int height = Integer.parseInt(textField1.getText());
+                int width = Integer.parseInt(textField2.getText());
+                Color color;
 
                 if (redRadioButton.isSelected()) {
                     // Red radio button is selected
                     // Do something with the red selection
-                    color = "red";
+                    color = Color.RED;
                 } else if (greenRadioButton.isSelected()) {
                     // Green radio button is selected
                     // Do something with the green selection
-                    color = "green";
+                    color = Color.GREEN;
                 } else if (blueRadioButton.isSelected()) {
                     // Blue radio button is selected
                     // Do something with the blue selection
-                    color = "blue";
+                    color = Color.BLUE;
                 } else {
                     // No radio button is selected
                     // Handle the case where no selection is made
-                    color = ""; // or set a default color value
+                    color = Color.BLACK; // or set a default color value
                 }
+
+                RectangleView2D rectangleView = new RectangleView2D(width, height, color);
+                rectangleView.setVisible(true);
+                rectangleView.setSize(1000, 600);
             }
         });
     }
