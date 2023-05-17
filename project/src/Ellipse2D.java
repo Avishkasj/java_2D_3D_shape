@@ -42,9 +42,9 @@ public class Ellipse2D extends JFrame{
                 color = Color.BLACK;
             }
 
-//            EllipseView2D ellipseView = new EllipseView2D(x, y, width, height, color);
-//            ellipseView.setVisible(true);
-//            ellipseView.setSize(800, 600);
+            EllipseView2D ellipseView = new EllipseView2D(x, y, width, height, color);
+            ellipseView.setVisible(true);
+            ellipseView.setSize(800, 600);
         });
 
 

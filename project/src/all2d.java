@@ -50,6 +50,14 @@ public class all2d extends JFrame {
                 frame7.setSize(1000, 600);
             }
         });
+        arcButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame8= new Arc2D("2D Arc");
+                frame8.setVisible(true);
+                frame8.setSize(1000, 600);
+            }
+        });
     }
 
 
