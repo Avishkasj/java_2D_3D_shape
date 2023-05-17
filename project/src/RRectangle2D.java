@@ -3,38 +3,40 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Arc2D extends JFrame {
-    private JTextField StartAngle;
-    private JTextField ArcAngle;
-    private JTextField Diameter;
+public class RRectangle2D extends JFrame {
+    private JTextField textField1;
+    private JTextField textField2;
     private JRadioButton redRadioButton;
     private JRadioButton greenRadioButton;
     private JRadioButton blueRadioButton;
     private JButton createButton;
-    private JPanel mypanel7;
+    private JPanel mypanel4;
+    private JTextField textField3;
+    private JTextField textField4;
+    private JLabel ArcHeight;
+    private JLabel ArcWidth;
 
     private ButtonGroup colorButtonGroup;
 
-
-    public Arc2D(String title) {
+    public RRectangle2D(String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(mypanel7);
+        this.setContentPane(mypanel4);
         this.pack();
 
+        // Create the ButtonGroup and add radio buttons to it
         colorButtonGroup = new ButtonGroup();
         colorButtonGroup.add(redRadioButton);
         colorButtonGroup.add(greenRadioButton);
         colorButtonGroup.add(blueRadioButton);
 
-
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int diameter = Integer.parseInt(Diameter.getText());
-                int startAngle = Integer.parseInt(StartAngle.getText());
-                int arcAngle = Integer.parseInt(ArcAngle.getText());
-
+                int height = Integer.parseInt(textField1.getText());
+                int width = Integer.parseInt(textField2.getText());
+                int arcHeight = Integer.parseInt(textField4.getText());
+                int arcWidth = Integer.parseInt(textField3.getText());
                 Color color;
 
                 if (redRadioButton.isSelected()) {
@@ -55,12 +57,10 @@ public class Arc2D extends JFrame {
                     color = Color.BLACK; // or set a default color value
                 }
 
-                ArcView2D arcView = new ArcView2D(diameter, startAngle, arcAngle, color);
-                arcView.setVisible(true);
-                arcView.setSize(1000, 600);
-
+                RoundRectangleView2D rrectangleView = new RoundRectangleView2D(width, height,arcWidth,arcHeight, color);
+                rrectangleView .setVisible(true);
+                rrectangleView .setSize(1000, 600);
             }
         });
     }
 }
-
