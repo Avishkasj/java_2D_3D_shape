@@ -33,6 +33,23 @@ public class all2d extends JFrame {
                 frame5.setSize(1000, 600);
             }
         });
+        lineButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame6= new Line2D("2D Line");
+                frame6.setVisible(true);
+                frame6.setSize(1000, 600);
+
+            }
+        });
+        ellipseButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame7= new Ellipse2D("2D Ellipse");
+                frame7.setVisible(true);
+                frame7.setSize(1000, 600);
+            }
+        });
     }
 
 
