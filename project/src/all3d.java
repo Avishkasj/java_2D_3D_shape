@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class all3d extends JFrame {
 
@@ -11,6 +13,14 @@ public class all3d extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mypanel3);
         this.pack();
+        cubeButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame9= new Cube3Dinput();
+                frame9.setVisible(true);
+                frame9.setSize(1000, 600);
+            }
+        });
     }
 
 }

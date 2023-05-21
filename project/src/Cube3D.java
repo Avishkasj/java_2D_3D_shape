@@ -59,18 +59,18 @@ public class Cube3D extends JFrame {
     }
 
     public static void main(String[] args) {
-        int size = Integer.parseInt(JOptionPane.showInputDialog("Enter the size of the cube:"));
-        Color color = JColorChooser.showDialog(null, "Choose a color", Color.WHITE);
+//        int size = Integer.parseInt(JOptionPane.showInputDialog("Enter the size of the cube:"));
+//        Color color = JColorChooser.showDialog(null, "Choose a color", Color.WHITE);
 
-        int choice = JOptionPane.showConfirmDialog(null, "Do you want to add a shadow?", "Shadow", JOptionPane.YES_NO_OPTION);
-        boolean hasShadow = (choice == JOptionPane.YES_OPTION);
-
-        Color shadowColor = null;
-        if (hasShadow) {
-            shadowColor = JColorChooser.showDialog(null, "Choose a shadow color", Color.BLACK);
-        }
-
-        Cube3D cubeGenerator = new Cube3D(size, color, hasShadow, shadowColor);
-        cubeGenerator.setVisible(true);
+//        int choice = JOptionPane.showConfirmDialog(null, "Do you want to add a shadow?", "Shadow", JOptionPane.YES_NO_OPTION);
+//        boolean hasShadow = (choice == JOptionPane.YES_OPTION);
+//
+//        Color shadowColor = null;
+//        if (hasShadow) {
+//            shadowColor = JColorChooser.showDialog(null, "Choose a shadow color", Color.BLACK);
+//        }
+//
+//        Cube3D cubeGenerator = new Cube3D(size, color, hasShadow, shadowColor);
+//        cubeGenerator.setVisible(true);
     }
 }
