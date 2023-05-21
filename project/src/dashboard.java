@@ -42,4 +42,8 @@ public class dashboard extends JFrame {
         frame.setVisible(true);
         frame.setSize(1000, 600);
     }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
