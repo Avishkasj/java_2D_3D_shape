@@ -6,7 +6,7 @@ public class all3d extends JFrame {
 
     private JPanel mypanel3;
     private JButton cubeButton1;
-    private JButton cubeButton;
+    private JButton sphere3DButton;
 
     public all3d(String title) {
         super(title);
