@@ -8,6 +8,7 @@ public class dashboard extends JFrame {
     private JPanel mypanel;
     private JButton a2DButton;
     private JButton a3DButton;
+    private JButton button1;
 
 
     public dashboard(String title){
@@ -33,6 +34,14 @@ public class dashboard extends JFrame {
                 JFrame frame3= new all3d("All 3D");
                 frame3.setVisible(true);
                 frame3.setSize(1000, 600);
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame13= new about();
+                frame13.setVisible(true);
+                frame13.setSize(1000, 600);
             }
         });
     }
