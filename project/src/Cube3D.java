@@ -1,11 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class Cube3D extends JFrame {
     private int size;
     private Color color;
     private boolean hasShadow;
     private Color shadowColor;
+    private JButton downloadButton;
+    private JFileChooser fileChooser;
 
     public Cube3D(int size, Color color, boolean hasShadow, Color shadowColor) {
         this.size = size;
@@ -17,6 +23,32 @@ public class Cube3D extends JFrame {
         setSize(500, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+
+        setupDownloadButton();
+    }
+
+    private void setupDownloadButton() {
+        downloadButton = new JButton("Download");
+        downloadButton.addActionListener(e -> saveAsImage());
+        add(downloadButton, BorderLayout.SOUTH);
+    }
+
+    private void saveAsImage() {
+        fileChooser = new JFileChooser();
+        int returnVal = fileChooser.showSaveDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fileChooser.getSelectedFile();
+            try {
+                BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
+                Graphics2D g2d = image.createGraphics();
+                paint(g2d);
+                ImageIO.write(image, "png", file);
+                g2d.dispose();
+                JOptionPane.showMessageDialog(this, "Image saved successfully.");
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(this, "Error saving image: " + ex.getMessage());
+            }
+        }
     }
 
     @Override
@@ -59,18 +91,7 @@ public class Cube3D extends JFrame {
     }
 
     public static void main(String[] args) {
-//        int size = Integer.parseInt(JOptionPane.showInputDialog("Enter the size of the cube:"));
-//        Color color = JColorChooser.showDialog(null, "Choose a color", Color.WHITE);
-
-//        int choice = JOptionPane.showConfirmDialog(null, "Do you want to add a shadow?", "Shadow", JOptionPane.YES_NO_OPTION);
-//        boolean hasShadow = (choice == JOptionPane.YES_OPTION);
-//
-//        Color shadowColor = null;
-//        if (hasShadow) {
-//            shadowColor = JColorChooser.showDialog(null, "Choose a shadow color", Color.BLACK);
-//        }
-//
-//        Cube3D cubeGenerator = new Cube3D(size, color, hasShadow, shadowColor);
-//        cubeGenerator.setVisible(true);
+        Cube3D cube = new Cube3D(20, Color.BLUE, true, Color.GRAY);
+        cube.setVisible(true);
     }
 }

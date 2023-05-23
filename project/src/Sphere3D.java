@@ -1,11 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class Sphere3D extends JFrame {
     private int size;
     private Color color;
     private boolean hasShadow;
     private Color shadowColor;
+    private JButton downloadButton;
+    private JFileChooser fileChooser;
 
     public Sphere3D(int size, Color color, boolean hasShadow, Color shadowColor) {
         this.size = size;
@@ -20,6 +26,32 @@ public class Sphere3D extends JFrame {
 
         JPanel panel = new CustomPanel();
         add(panel);
+
+        setupDownloadButton();
+    }
+
+    private void setupDownloadButton() {
+        downloadButton = new JButton("Download");
+        downloadButton.addActionListener(e -> saveAsImage());
+        add(downloadButton, BorderLayout.SOUTH);
+    }
+
+    private void saveAsImage() {
+        fileChooser = new JFileChooser();
+        int returnVal = fileChooser.showSaveDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fileChooser.getSelectedFile();
+            try {
+                BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
+                Graphics2D g2d = image.createGraphics();
+                paint(g2d);
+                ImageIO.write(image, "png", file);
+                g2d.dispose();
+                JOptionPane.showMessageDialog(this, "Image saved successfully.");
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(this, "Error saving image: " + ex.getMessage());
+            }
+        }
     }
 
     private class CustomPanel extends JPanel {
@@ -55,5 +87,9 @@ public class Sphere3D extends JFrame {
             g2d.dispose();
         }
     }
-}
 
+    public static void main(String[] args) {
+        Sphere3D sphere = new Sphere3D(20, Color.RED, true, Color.GRAY);
+        sphere.setVisible(true);
+    }
+}
