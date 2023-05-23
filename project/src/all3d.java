@@ -21,6 +21,14 @@ public class all3d extends JFrame {
                 frame9.setSize(1000, 600);
             }
         });
+        sphere3DButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame10= new Sphere3Dinput();
+                frame10.setVisible(true);
+                frame10.setSize(1000, 600);
+            }
+        });
     }
 
 }
