@@ -21,6 +21,7 @@ public class all2d extends JFrame {
         rectangleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all2d.super.dispose();
                 JFrame frame4= new Rectangle2D("2D Rectangle");
                 frame4.setVisible(true);
                 frame4.setSize(1000, 600);
@@ -29,6 +30,7 @@ public class all2d extends JFrame {
         circleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all2d.super.dispose();
                 JFrame frame5= new Circle2D("2D Circle");
                 frame5.setVisible(true);
                 frame5.setSize(1000, 600);
@@ -37,6 +39,7 @@ public class all2d extends JFrame {
         lineButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all2d.super.dispose();
                 JFrame frame6= new Line2D("2D Line");
                 frame6.setVisible(true);
                 frame6.setSize(1000, 600);
@@ -46,6 +49,7 @@ public class all2d extends JFrame {
         ellipseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all2d.super.dispose();
                 JFrame frame7= new Ellipse2D("2D Ellipse");
                 frame7.setVisible(true);
                 frame7.setSize(1000, 600);
@@ -54,6 +58,7 @@ public class all2d extends JFrame {
         arcButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all2d.super.dispose();
                 JFrame frame8= new Arc2D("2D Arc");
                 frame8.setVisible(true);
                 frame8.setSize(1000, 600);
@@ -62,6 +67,7 @@ public class all2d extends JFrame {
         roundRectangleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all2d.super.dispose();
                 JFrame frame9= new RRectangle2D("2D Round Rectangle");
                 frame9.setVisible(true);
                 frame9.setSize(1000, 600);

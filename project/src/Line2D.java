@@ -11,6 +11,7 @@ public class Line2D extends JFrame {
     private JRadioButton redRadioButton;
     private JRadioButton greenRadioButton;
     private JRadioButton blueRadioButton;
+    private JButton backButton;
     private ButtonGroup colorButtonGroup; // ButtonGroup to manage radio button selection
 
     public Line2D(String title) {
@@ -55,6 +56,15 @@ public class Line2D extends JFrame {
                 LineView2D lineView = new LineView2D(startX, startY, endX, endY, color);
                 lineView.setVisible(true);
                 lineView.setSize(1000, 600);
+            }
+        });
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Line2D.super.dispose();
+                JFrame frame2= new all2d("All 2D");
+                frame2.setVisible(true);
+                frame2.setSize(1000, 600);
             }
         });
     }

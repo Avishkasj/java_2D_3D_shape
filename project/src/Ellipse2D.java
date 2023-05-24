@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ellipse2D extends JFrame{
     private JTextField widthTextField;
@@ -11,6 +13,7 @@ public class Ellipse2D extends JFrame{
     private JRadioButton redRadioButton;
     private JButton createButton;
     private JPanel mypanel4;
+    private JButton backButton;
     private ButtonGroup colorButtonGroup;
 
     public Ellipse2D(String title) {
@@ -48,6 +51,15 @@ public class Ellipse2D extends JFrame{
         });
 
 
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Ellipse2D.super.dispose();
+                JFrame frame2= new all2d("All 2D");
+                frame2.setVisible(true);
+                frame2.setSize(1000, 600);
+            }
+        });
     }
 
 }

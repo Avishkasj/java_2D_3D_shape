@@ -16,6 +16,7 @@ public class all3d extends JFrame {
         cubeButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all3d.super.dispose();
                 JFrame frame9= new Cube3Dinput();
                 frame9.setVisible(true);
                 frame9.setSize(1000, 600);
@@ -24,6 +25,7 @@ public class all3d extends JFrame {
         sphere3DButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                all3d.super.dispose();
                 JFrame frame10= new Sphere3Dinput();
                 frame10.setVisible(true);
                 frame10.setSize(1000, 600);

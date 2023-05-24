@@ -12,6 +12,7 @@ public class Circle2D extends JFrame {
     private ButtonGroup colorButtonGroup;
     private JButton createButton;
     private JPanel panel7;
+    private JButton backButton;
 
     public Circle2D(String title) {
     super(title);
@@ -58,5 +59,14 @@ public class Circle2D extends JFrame {
 
         }
     });
-}
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Circle2D.super.dispose();
+                JFrame frame2= new all2d("All 2D");
+                frame2.setVisible(true);
+                frame2.setSize(1000, 600);
+            }
+        });
+    }
 }

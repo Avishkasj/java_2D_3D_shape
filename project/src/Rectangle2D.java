@@ -11,6 +11,7 @@ public class Rectangle2D extends JFrame {
     private JRadioButton redRadioButton;
     private JRadioButton greenRadioButton;
     private JRadioButton blueRadioButton;
+    private JButton backButton;
     private ButtonGroup colorButtonGroup; // ButtonGroup to manage radio button selection
 
     public Rectangle2D(String title) {
@@ -53,6 +54,15 @@ public class Rectangle2D extends JFrame {
                 RectangleView2D rectangleView = new RectangleView2D(width, height, color);
                 rectangleView.setVisible(true);
                 rectangleView.setSize(1000, 600);
+            }
+        });
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Rectangle2D.super.dispose();
+                JFrame frame2= new all2d("All 2D");
+                frame2.setVisible(true);
+                frame2.setSize(1000, 600);
             }
         });
     }

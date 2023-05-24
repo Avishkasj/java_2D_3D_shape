@@ -12,6 +12,7 @@ public class Arc2D extends JFrame {
     private JRadioButton blueRadioButton;
     private JButton createButton;
     private JPanel mypanel7;
+    private JButton backButton;
 
     private ButtonGroup colorButtonGroup;
 
@@ -59,6 +60,15 @@ public class Arc2D extends JFrame {
                 arcView.setVisible(true);
                 arcView.setSize(1000, 600);
 
+            }
+        });
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Arc2D.super.dispose();
+                JFrame frame2= new all2d("All 2D");
+                frame2.setVisible(true);
+                frame2.setSize(1000, 600);
             }
         });
     }

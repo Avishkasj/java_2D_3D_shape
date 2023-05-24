@@ -15,6 +15,7 @@ public class RRectangle2D extends JFrame {
     private JTextField textField4;
     private JLabel ArcHeight;
     private JLabel ArcWidth;
+    private JButton backButton;
 
     private ButtonGroup colorButtonGroup;
 
@@ -60,6 +61,15 @@ public class RRectangle2D extends JFrame {
                 RoundRectangleView2D rrectangleView = new RoundRectangleView2D(width, height,arcWidth,arcHeight, color);
                 rrectangleView .setVisible(true);
                 rrectangleView .setSize(1000, 600);
+            }
+        });
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RRectangle2D.super.dispose();
+                JFrame frame2= new all2d("All 2D");
+                frame2.setVisible(true);
+                frame2.setSize(1000, 600);
             }
         });
     }
