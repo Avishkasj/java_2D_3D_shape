@@ -18,7 +18,7 @@ public class Arc2D extends JFrame {
 
     public Arc2D(String title) {
         super(title);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(mypanel7);
         this.pack();
 

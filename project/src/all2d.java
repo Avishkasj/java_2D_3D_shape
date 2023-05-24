@@ -14,7 +14,8 @@ public class all2d extends JFrame {
 
     public all2d(String title) {
         super(title);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(mypanel2);
         this.pack();
         rectangleButton.addActionListener(new ActionListener() {

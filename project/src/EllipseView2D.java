@@ -24,7 +24,7 @@ public class EllipseView2D extends JFrame {
         this.height = height;
         this.color = color;
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setSize(800, 600);
         this.setVisible(true);
 

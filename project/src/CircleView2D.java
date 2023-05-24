@@ -19,7 +19,7 @@ public class CircleView2D extends JFrame {
         this.diameter = diameter;
         this.color = color;
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(panel6);
         this.setLayout(new BorderLayout());
 

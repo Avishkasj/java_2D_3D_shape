@@ -10,7 +10,7 @@ public class Sphere3Dinput extends JFrame {
 
     public Sphere3Dinput() {
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(frame10);
         frame10.setSize(1000, 600);
         this.pack();

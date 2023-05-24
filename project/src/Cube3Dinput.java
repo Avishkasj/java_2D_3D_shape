@@ -11,7 +11,7 @@ public class Cube3Dinput extends JFrame {
 
     public Cube3Dinput() {
 
-    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.setContentPane(mypanel7);
     this.pack();
     nextButton.addActionListener(new ActionListener() {

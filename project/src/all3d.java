@@ -10,7 +10,7 @@ public class all3d extends JFrame {
 
     public all3d(String title) {
         super(title);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(mypanel3);
         this.pack();
         cubeButton1.addActionListener(new ActionListener() {

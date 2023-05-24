@@ -21,7 +21,7 @@ public class Cube3D extends JFrame {
 
         setTitle("3D Cube Generator");
         setSize(500, 500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
         setupDownloadButton();

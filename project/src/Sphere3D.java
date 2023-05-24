@@ -21,7 +21,7 @@ public class Sphere3D extends JFrame {
 
         setTitle("3D Sphere Generator");
         setSize(500, 500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new CustomPanel();

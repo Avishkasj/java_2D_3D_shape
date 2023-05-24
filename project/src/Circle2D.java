@@ -15,7 +15,7 @@ public class Circle2D extends JFrame {
 
     public Circle2D(String title) {
     super(title);
-    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.setContentPane(panel7);
     this.pack();
 
