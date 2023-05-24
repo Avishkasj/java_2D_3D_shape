@@ -27,8 +27,8 @@ public class Cube3Dinput extends JFrame {
                 shadowColor = JColorChooser.showDialog(null, "Choose a shadow color", Color.BLACK);
             }
 
-            Cube3D cubeGenerator = new Cube3D(size);
-//            cubeGenerator.setVisible(true);
+            Cube3D cubeGenerator = new Cube3D(size, color, hasShadow, shadowColor);
+            cubeGenerator.setVisible(true);
         }
     });
 }
