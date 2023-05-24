@@ -7,6 +7,7 @@ public class Cube3Dinput extends JFrame {
     private JTextField textField1;
     private JButton nextButton;
     private JPanel mypanel7;
+    private JButton backButton;
 
 
     public Cube3Dinput() {
@@ -31,5 +32,14 @@ public class Cube3Dinput extends JFrame {
             cubeGenerator.setVisible(true);
         }
     });
-}
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Cube3Dinput.super.dispose();
+                JFrame frame3= new all3d("All 3D");
+                frame3.setVisible(true);
+                frame3.setSize(1000, 600);
+            }
+        });
+    }
 }
