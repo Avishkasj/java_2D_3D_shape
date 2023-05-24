@@ -20,7 +20,7 @@ public class dashboard extends JFrame {
         a2DButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dashboard.super.dispose();
+//                dashboard.super.dispose();
                 JFrame frame2= new all2d("All 2D");
                 frame2.setVisible(true);
                 frame2.setSize(1000, 600);
@@ -30,7 +30,7 @@ public class dashboard extends JFrame {
         a3DButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dashboard.super.dispose();
+//                dashboard.super.dispose();
                 JFrame frame3= new all3d("All 3D");
                 frame3.setVisible(true);
                 frame3.setSize(1000, 600);

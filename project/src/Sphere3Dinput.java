@@ -7,6 +7,7 @@ public class Sphere3Dinput extends JFrame {
     private JTextField textField1;
     private JButton createButton;
     private JPanel frame10;
+    private JButton backButton;
 
     public Sphere3Dinput() {
 
@@ -33,5 +34,14 @@ public class Sphere3Dinput extends JFrame {
 
         }
     });
-}
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Sphere3Dinput.super.dispose();
+                JFrame frame3= new all3d("All 3D");
+                frame3.setVisible(true);
+                frame3.setSize(1000, 600);
+            }
+        });
+    }
 }
