@@ -108,4 +108,13 @@ public void connection(){
     frame.pack();
     frame.setVisible(true);
     }
+
+
+    // public static void main(String[] args) {
+
+    //     JFrame frame  = new JFrame("Employee");
+    //     frame.setContentPane(new Emplyee().mypanel);
+    //     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //     frame.pack();
+    //     frame
 }
